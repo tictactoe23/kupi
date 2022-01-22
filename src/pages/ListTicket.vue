@@ -104,7 +104,7 @@ export default {
       Number(this.$route.params.adult),
       Number(this.$route.params.child),
       Number(this.$route.params.infant),
-      Boolean(this.$route.params.business)
+      (this.$route.params.business = this.$route.params.business === "true")
     );
     if (this.tickets === false) {
       await this.$router.push({
