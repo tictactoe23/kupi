@@ -106,6 +106,12 @@ export default {
       Number(this.$route.params.infant),
       Boolean(this.$route.params.business)
     );
+    if (this.tickets === false) {
+      await this.$router.push({
+        name: "Home",
+      });
+      location.reload();
+    }
   },
 };
 </script>
